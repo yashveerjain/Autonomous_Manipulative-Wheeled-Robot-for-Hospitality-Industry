@@ -1,4 +1,4 @@
-# Manipulatie-Wheeled-Robot-for-Hospitality-Industry
+# Robo Serve
 Serve in restraunts
 
 ## Overview
@@ -15,7 +15,7 @@ There are many applications instead of serving food, including but not limited t
 ## Installation
 ```
 cd ~/catkin_ws/src
-git clone https://github.com/yashveerjain/Autonomous_Manipulative-Wheeled-Robot-for-Hospitality-Industry.git robo_serve
+git clone https://github.com/yashveerjain/Robo-Serve.git robo_serve
 cd ..
 catkin_make
 . devel/setup.bash
