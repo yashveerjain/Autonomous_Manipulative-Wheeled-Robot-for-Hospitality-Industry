@@ -8,14 +8,14 @@ There are many applications instead of serving food, including but not limited t
 
 ## Team
 * Yashveer Jain
-* Rohit Reddy
+* Mayank
 
 ---
 
 ## Installation
 ```
 cd ~/catkin_ws/src
-git clone https://github.com/yashveerjain/Manipulative-Wheeled-Robot-for-Hospitality-Industry.git robo9
+git clone https://github.com/yashveerjain/Autonomous_Manipulative-Wheeled-Robot-for-Hospitality-Industry.git
 cd ..
 catkin_make
 . devel/setup.bash
@@ -29,26 +29,19 @@ catkin_make
 ## Run
 * On one terminal
 ```
-roslaunch robo9 robo.launch
+* roslaunch launch/robo.launch
 ```
-* On another terminal
-```
-cd ~/catkin_ws/src
-python3 robo9/src/robo_motion_v3_only_arm_ik.py
-```
+ - this will do the path planning where in you need to type a number (1-4) for table and then the robot will be spawned in the gazebo
 
 ## About Executables:
-* robo_motion_v3_only_arm_ik.py
-    - Contain inverse kinematics of Manipulator, so Manipulator moves automatically including the arm, end-effector and tray-diffusor.
-    - Teleop of moving robot base
-    - For moving the manipulator need to give Table number between (1-6)
-        - where Tables 1-3 are in right direction of robot
-        - and Table 4-6 are in left direction of robot.
 * robo_motion.py
     - Operates solely on Teleop keyboard keys.
     - See the message printed on after running to hit right keys
 * robo_motion_v2.py
     - Meant to be fully Autonomous, but still work in progress ;)
+* automotion.py 
+ - autonomous path planning 
+
 
 ## Robo Workspace
 ![](robo_details/RoboArmWorkspace.png)
