@@ -15,7 +15,7 @@ There are many applications instead of serving food, including but not limited t
 ## Installation
 ```
 cd ~/catkin_ws/src
-git clone https://github.com/yashveerjain/Autonomous_Manipulative-Wheeled-Robot-for-Hospitality-Industry.git
+git clone https://github.com/yashveerjain/Autonomous_Manipulative-Wheeled-Robot-for-Hospitality-Industry.git robo_serve
 cd ..
 catkin_make
 . devel/setup.bash
@@ -31,25 +31,17 @@ catkin_make
 ```
 * roslaunch launch/robo.launch
 ```
- - this will do the path planning where in you need to type a number (1-4) for table and then the robot will be spawned in the gazebo
+ - this will do the path planning where in you need to type a number (1-4) for table and then the robot will be spawned in the gazebo and moved to that table, and again moveback to kitchen.
 
 ## About Executables:
-* robo_motion.py
-    - Operates solely on Teleop keyboard keys.
-    - See the message printed on after running to hit right keys
-* robo_motion_v2.py
-    - Meant to be fully Autonomous, but still work in progress ;)
-* automotion.py 
- - autonomous path planning 
 
-
-## Robo Workspace
-![](robo_details/RoboArmWorkspace.png)
+* automnomous_motion.py 
+ - autonomous path planning and moving the robot by publishing the command vel, and subscribe to odometry for closed loop feedback
 
 ---
 
 ## Gazebo Visulization
-click [here](https://drive.google.com/file/d/1JSarveQId-FuYrpnsp-5kvK6pxswPh_k/view?usp=sharing)
+click [here](https://drive.google.com/file/d/171N8MvP9Bu7LfLLoF1u9X4jArhIm103k/view)
 
 ---
 
