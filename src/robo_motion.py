@@ -69,7 +69,7 @@ class Robot:
         '.':(-1,1),
         'm':(-1,-1),
            }
-    def __init__(self, robo_cmd="/robo9"):
+    def __init__(self, robo_cmd="/robo_serve"):
         self.speed = 0.3 # 1m/s
         self.turn = 0.3 # 1rad/sec
 

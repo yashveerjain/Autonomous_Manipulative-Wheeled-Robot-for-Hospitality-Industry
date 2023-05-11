@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <!-- Name your robot here -->
-<robot name ="modified_robo9_with_planning" xmlns:xacro="http://wiki.ros.org/xacro">
+<robot name ="robo_serve" xmlns:xacro="http://wiki.ros.org/xacro">
 
 <!-- Include your urdf files here -->
 	<!-- Include Robot's urdf filepath -->
 	<!-- Include Lidar's urdf filepath -->
-	<xacro:include filename="$(find modified_robo9_with_planning)/urdf/modified_robo9_with_planning.urdf"/>
+	<xacro:include filename="$(find robo_serve)/urdf/robo_serve.urdf"/>
 	<xacro:macro name="box_inertia" params="mass x y z">
         <inertia ixx="${mass*(y*y+z*z)/12}" ixy = "0" ixz = "0" iyy="${mass*(x*x+z*z)/12}" iyz = "0" izz="${mass*(x*x+y*y)/12}" />
     </xacro:macro>
@@ -37,7 +37,7 @@
 		<visualize>true</visualize>
 		<!-- <topic>__default_topic__</topic>/ -->
 		<plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
-			<topicName>/modified_robo9_with_planning/imu</topicName>
+			<topicName>/robo_serve/imu</topicName>
 			<bodyName>imu_link</bodyName>
 			<updateRateHZ>10.0</updateRateHZ>
 			<gaussianNoise>0.0</gaussianNoise>
@@ -53,7 +53,7 @@
 <!--  Gazebo plugin for control here is already added for you -->
 	<gazebo>
 		<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-			<robotNamespace>/modified_robo9_with_planning</robotNamespace>
+			<robotNamespace>/robo_serve</robotNamespace>
 			<robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
 			<legacyModeNS>true</legacyModeNS>
 		</plugin>
@@ -82,8 +82,8 @@
 			<!-- 8 in to m-> 0.2032 -->
 			<wheelTorque>40</wheelTorque>
 			<wheelAcceleration>5.0</wheelAcceleration>
-			<commandTopic>/modified_robo9_with_planning/cmd_vel</commandTopic>
-			<odometryTopic>/modified_robo9_with_planning/odom</odometryTopic>
+			<commandTopic>/robo_serve/cmd_vel</commandTopic>
+			<odometryTopic>/robo_serve/odom</odometryTopic>
 			<odometryFrame>odom</odometryFrame>
 			<robotBaseFrame>dummy_link</robotBaseFrame>
 		</plugin>

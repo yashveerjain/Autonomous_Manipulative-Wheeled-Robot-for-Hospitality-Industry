@@ -69,7 +69,7 @@ class Robot:
         '.':(-1,1),
         'm':(-1,-1),
            }
-    def __init__(self, robo_cmd="/robo9"):
+    def __init__(self, robo_cmd="/robo_serve"):
         self.speed = 0.3 # 1m/s
         self.turn = 0.3 # 1rad/sec
 
@@ -80,7 +80,7 @@ class Robot:
         
         self.tablePose = self.table2pose()
         self.odom_output = None
-        rospy.Subscriber("robo9/odom", Odometry, self.callback)
+        rospy.Subscriber("robo_serve/odom", Odometry, self.callback)
         
         self.startPose = (0,0)
         self.start=True
@@ -230,7 +230,7 @@ class Robot:
         self.TPose = None
         print (msg)
         while not rospy.is_shutdown():
-            rospy.Subscriber("robo9/odom", Odometry, self.callback)
+            rospy.Subscriber("robo_serve/odom", Odometry, self.callback)
             key = self.getKey()
             self.move(key)
             print("Subscriber : ",self.odom_output )

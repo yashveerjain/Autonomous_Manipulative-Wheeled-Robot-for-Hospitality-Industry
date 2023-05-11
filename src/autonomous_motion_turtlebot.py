@@ -36,7 +36,7 @@ class Robot():
     current_end_effector_pose = initial_end_effector_pose
     current_tray_diffusor_pose = base_pose_tray_diffusor
 
-    def __init__(self, robo_cmd="/robo9", start_pos=(0,1,0),clearance=5,map_dim=(200,500) ):
+    def __init__(self, robo_cmd="/robo_serve", start_pos=(0,1,0),clearance=5,map_dim=(200,500) ):
         # self.speed = 0.3 # 1m/s
         # self.turn = 0.3 # 1rad/sec
 
@@ -48,7 +48,7 @@ class Robot():
         rospy.Subscriber("odom", Odometry, self.odom_callback)
 
         self.odom_output = None
-        # rospy.Subscriber("robo9/odom", Odometry, self.odom_callback)
+        # rospy.Subscriber("robo_serve/odom", Odometry, self.odom_callback)
 
         self.restraunt_map = Map(start_pos,clearance=clearance, map_dim=map_dim)
         self.start_pos = self.restraunt_map.process_pos2cm(start_pos)

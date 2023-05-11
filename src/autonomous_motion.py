@@ -36,7 +36,7 @@ class Robot():
     current_end_effector_pose = initial_end_effector_pose
     current_tray_diffusor_pose = base_pose_tray_diffusor
 
-    def __init__(self, robo_cmd="/modified_robo9_with_planning", start_pos=(0,5,0) ):
+    def __init__(self, robo_cmd="/robo_serve", start_pos=(0,5,0) ):
         # self.speed = 0.3 # 1m/s
         # self.turn = 0.3 # 1rad/sec
         unit = {"cm" : 100, "mm":1000} #w.r.t m
